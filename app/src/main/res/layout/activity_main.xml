@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  整体界面纵向划分为两个功能区，各占一半高度：
+  区1：点击按钮用代码动态添加 TextView，ScrollView 嵌套 LinearLayout 实现滚动
+  区2：MVC 模式的 ProgramAdviser（Spinner 选择类别 + 确定按钮 + 结果展示）
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ===================== 功能区 1 ===================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/area1_background"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_add_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:text="@string/add_textview" />
+
+        <!-- ScrollView 嵌套 LinearLayout：新增的 TextView 全部加入下方容器 -->
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/text_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- ===================== 功能区 2（MVC 之 View） ===================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/area2_background"
+        android:orientation="vertical"
+        android:padding="@dimen/page_padding">
+
+        <Spinner
+            android:id="@+id/sp_language_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/advice_categories" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:text="@string/ok" />
+
+        <TextView
+            android:id="@+id/tv_advice_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/advice_result_margin_top"
+            android:gravity="center"
+            android:textColor="@color/area2_text_color"
+            android:textSize="@dimen/advice_result_size" />
+    </LinearLayout>
+
+</LinearLayout>

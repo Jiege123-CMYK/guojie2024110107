@@ -1,0 +1,43 @@
+<resources>
+    <!-- 应用标题：姓名 + 学号 -->
+    <string name="app_name">郭杰2024110107</string>
+
+    <!-- 功能区 1：动态添加 TextView -->
+    <string name="add_textview">ADD TEXTVIEW</string>
+    <string name="new_textview_format">This is a new textView:%1$d</string>
+
+    <!-- 功能区 2：MVC ProgramAdviser -->
+    <string name="ok">确定</string>
+
+    <!-- ProgramAdviser 模型数据：查询类别（Spinner 条目） -->
+    <string-array name="advice_categories">
+        <item>@string/category_new_language</item>
+        <item>@string/category_mobile</item>
+        <item>@string/category_web_frontend</item>
+        <item>@string/category_backend</item>
+        <item>@string/category_data_analysis</item>
+        <item>@string/category_ai</item>
+    </string-array>
+
+    <!-- ProgramAdviser 模型数据：与类别一一对应的推荐编程语言（查询结果） -->
+    <string-array name="advice_programs">
+        <item>@string/program_kotlin</item>
+        <item>@string/program_kotlin</item>
+        <item>@string/program_javascript</item>
+        <item>@string/program_java</item>
+        <item>@string/program_python</item>
+        <item>@string/program_python</item>
+    </string-array>
+
+    <string name="category_new_language">新语言</string>
+    <string name="category_mobile">移动开发</string>
+    <string name="category_web_frontend">Web 前端</string>
+    <string name="category_backend">后端开发</string>
+    <string name="category_data_analysis">数据分析</string>
+    <string name="category_ai">人工智能</string>
+
+    <string name="program_kotlin">Kotlin</string>
+    <string name="program_java">Java</string>
+    <string name="program_javascript">JavaScript</string>
+    <string name="program_python">Python</string>
+</resources>
